@@ -1,4 +1,22 @@
 {
-  "cash_pct": 20,
-  "positions": []
+  "ts": "2026-04-19T09:55:00+08:00",
+  "cash_pct": 18.2,
+  "positions": [
+    {
+      "symbol": "NVDA",
+      "weight_pct": 12.5,
+      "cost_basis": 111.2,
+      "thesis_status": "active"
+    },
+    {
+      "symbol": "AAPL",
+      "weight_pct": 9.8,
+      "cost_basis": 178.4,
+      "thesis_status": "active"
+    }
+  ],
+  "sector_exposure": {
+    "technology": 41.3,
+    "consumer_electronics": 9.8
+  }
 }

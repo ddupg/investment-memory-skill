@@ -1,1 +1,4 @@
-{"type":"init"}
+{"ts": "2026-04-19T09:40:02+08:00", "type": "decision_created", "symbol": "NVDA", "action": "add", "confidence": 0.74, "source": "agent", "decision_id": "dec-2026-04-19-nvda-add", "linked_theses": ["thesis-nvda-core"]}
+{"ts": "2026-04-19T09:42:11+08:00", "type": "trade_executed", "symbol": "NVDA", "side": "buy", "quantity": 10, "price": 118.4, "source": "manual", "decision_id": "dec-2026-04-19-nvda-add"}
+{"ts": "2026-04-18T21:10:00+08:00", "type": "thesis_updated", "symbol": "NVDA", "stance": "bullish", "source": "manual"}
+{"ts": "2026-04-15T08:20:00+08:00", "type": "preference_changed", "field": "max_single_name_pct", "old": 12, "new": 15, "source": "manual"}

@@ -1,2 +1,31 @@
+version: 1
+updated_at: 2026-04-19T10:00:00+08:00
+source: manual
+
 risk_profile: moderate
-max_single_name_pct: 15
+
+style_bias:
+  - quality_growth
+  - event_driven
+
+avoid:
+  - leveraged_etf
+  - illiquid_microcap
+
+market_scope:
+  - US equities
+  - HK equities
+
+position_rules:
+  max_single_name_pct: 15
+  max_sector_pct: 35
+  min_cash_buffer_pct: 10
+
+decision_preferences:
+  require_thesis_before_buy: true
+  prefer_incremental_positioning: true
+  prefer_explainability: true
+
+notes:
+  - 不追纯情绪拉升
+  - 财报驱动机会可例外，但需要明确证据

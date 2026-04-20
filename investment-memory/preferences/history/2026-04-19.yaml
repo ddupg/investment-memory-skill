@@ -1,0 +1,20 @@
+version: 0
+archived_at: 2026-04-19T10:00:00+08:00
+source: manual
+
+risk_profile: moderate
+
+style_bias:
+  - quality_growth
+
+avoid:
+  - leveraged_etf
+
+position_rules:
+  max_single_name_pct: 12
+  max_sector_pct: 30
+  min_cash_buffer_pct: 10
+
+decision_preferences:
+  require_thesis_before_buy: true
+  prefer_incremental_positioning: true

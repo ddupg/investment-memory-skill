@@ -1,3 +1,29 @@
 version: 1
+repo_name: investment-memory
+updated_at: 2026-04-19T10:00:00+08:00
+
 entrypoints:
   active_preferences: preferences/active.yaml
+  latest_portfolio_snapshot: snapshots/portfolio/latest.json
+
+directories:
+  preferences: preferences/
+  snapshots: snapshots/
+  theses: theses/
+  events: events/
+  decisions: decisions/
+  summaries: summaries/
+
+read_order:
+  - preferences/active.yaml
+  - snapshots/portfolio/latest.json
+  - theses/<SYMBOL>/thesis.md
+  - theses/<SYMBOL>/updates.jsonl
+  - events/YYYY/YYYY-MM.jsonl
+  - decisions/YYYY/*.md
+
+rules:
+  facts_are_append_only: true
+  decisions_are_markdown: true
+  thesis_updates_require_event: true
+  preference_changes_require_history_archive: true
