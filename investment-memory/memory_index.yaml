@@ -1,0 +1,3 @@
+version: 1
+entrypoints:
+  active_preferences: preferences/active.yaml
