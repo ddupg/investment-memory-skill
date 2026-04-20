@@ -1,5 +1,10 @@
 ---
+instrument_id: NVDA.US
 symbol: NVDA
+market: US
+exchange: NASDAQ
+currency: USD
+security_type: equity
 status: active
 stance: bullish
 updated_at: 2026-04-19T09:30:00+08:00

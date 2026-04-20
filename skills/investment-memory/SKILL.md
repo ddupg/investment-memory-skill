@@ -28,3 +28,15 @@ Choose the smallest relevant sub-skill set:
 ## Repository
 The repository is a lightweight file-based investment memory store.
 Prefer human-readable files and append-only factual logs.
+
+## Identity rule
+Resolve every security to one canonical `instrument_id` such as `600519.SH`,
+`00700.HK`, or `NVDA.US`. Do not rely on a bare ticker when reading or writing.
+
+## Templates
+The authoritative write format lives in:
+
+- `templates/schema-reference.md`
+- the matching template files under `templates/`
+
+Before any write, load the schema reference and the relevant template.

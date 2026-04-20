@@ -1,5 +1,5 @@
-version: 1
-updated_at: 2026-04-19T10:00:00+08:00
+version: 2
+updated_at: 2026-04-20T09:00:00+08:00
 source: manual
 
 risk_profile: moderate
@@ -13,19 +13,42 @@ avoid:
   - illiquid_microcap
 
 market_scope:
-  - US equities
+  - CN A equities
   - HK equities
+  - US equities
+
+market_preference_order:
+  - CN_A
+  - HK
+  - US
 
 position_rules:
   max_single_name_pct: 15
   max_sector_pct: 35
   min_cash_buffer_pct: 10
 
+currency_rules:
+  base_currency: CNY
+  max_non_cny_net_assets_pct: 45
+
+market_rules:
+  CN_A:
+    target_max_pct: 55
+    note: 核心仓优先放在更熟悉、信息链更短的 A 股
+  HK:
+    target_max_pct: 30
+    note: 港股主要承接中国互联网和少数稀缺资产
+  US:
+    target_max_pct: 25
+    note: 美股主要配置真正稀缺且难替代的全球龙头
+
 decision_preferences:
   require_thesis_before_buy: true
   prefer_incremental_positioning: true
   prefer_explainability: true
+  prefer_market_priority_order: true
 
 notes:
   - 不追纯情绪拉升
   - 财报驱动机会可例外，但需要明确证据
+  - 同等条件下先看 A 股，再看港股，最后看美股

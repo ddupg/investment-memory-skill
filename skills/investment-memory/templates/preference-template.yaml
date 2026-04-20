@@ -1,0 +1,39 @@
+version: 1
+updated_at: <ISO8601 timestamp>
+source: <manual|agent>
+
+risk_profile: <conservative|moderate|aggressive>
+
+style_bias:
+  - <style>
+
+avoid:
+  - <instrument type or setup to avoid>
+
+market_scope:
+  - CN A equities
+  - HK equities
+  - US equities
+
+market_preference_order:
+  - CN_A
+  - HK
+  - US
+
+position_rules:
+  max_single_name_pct: 15
+  max_sector_pct: 35
+  min_cash_buffer_pct: 10
+
+currency_rules:
+  base_currency: CNY
+  max_non_cny_net_assets_pct: 45
+
+decision_preferences:
+  require_thesis_before_buy: true
+  prefer_incremental_positioning: true
+  prefer_explainability: true
+  prefer_market_priority_order: true
+
+notes:
+  - <plain-language note>

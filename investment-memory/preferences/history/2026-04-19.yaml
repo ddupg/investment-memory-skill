@@ -1,4 +1,4 @@
-version: 0
+version: 1
 archived_at: 2026-04-19T10:00:00+08:00
 source: manual
 
@@ -10,10 +10,22 @@ style_bias:
 avoid:
   - leveraged_etf
 
+market_scope:
+  - HK equities
+  - US equities
+
+market_preference_order:
+  - HK
+  - US
+
 position_rules:
   max_single_name_pct: 12
   max_sector_pct: 30
   min_cash_buffer_pct: 10
+
+currency_rules:
+  base_currency: CNY
+  max_non_cny_net_assets_pct: 50
 
 decision_preferences:
   require_thesis_before_buy: true

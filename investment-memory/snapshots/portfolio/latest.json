@@ -1,22 +1,58 @@
 {
-  "ts": "2026-04-19T09:55:00+08:00",
-  "cash_pct": 18.2,
+  "ts": "2026-04-20T08:55:00+08:00",
+  "base_currency": "CNY",
+  "cash_pct": 19.4,
+  "cash_by_currency_pct": {
+    "CNY": 11.0,
+    "HKD": 4.8,
+    "USD": 3.6
+  },
   "positions": [
     {
-      "symbol": "NVDA",
-      "weight_pct": 12.5,
-      "cost_basis": 111.2,
+      "instrument_id": "600519.SH",
+      "symbol": "600519",
+      "market": "CN_A",
+      "exchange": "SH",
+      "currency": "CNY",
+      "security_type": "equity",
+      "account_id": "a-share-primary",
+      "weight_pct": 8.8,
+      "cost_basis": 1678.0,
       "thesis_status": "active"
     },
     {
-      "symbol": "AAPL",
-      "weight_pct": 9.8,
-      "cost_basis": 178.4,
+      "instrument_id": "00700.HK",
+      "symbol": "00700",
+      "market": "HK",
+      "exchange": "HK",
+      "currency": "HKD",
+      "security_type": "equity",
+      "account_id": "hk-broker-main",
+      "weight_pct": 11.2,
+      "cost_basis": 318.4,
+      "thesis_status": "active"
+    },
+    {
+      "instrument_id": "NVDA.US",
+      "symbol": "NVDA",
+      "market": "US",
+      "exchange": "NASDAQ",
+      "currency": "USD",
+      "security_type": "equity",
+      "account_id": "us-broker-main",
+      "weight_pct": 9.4,
+      "cost_basis": 111.2,
       "thesis_status": "active"
     }
   ],
+  "market_exposure_pct": {
+    "CN_A": 8.8,
+    "HK": 11.2,
+    "US": 9.4
+  },
   "sector_exposure": {
-    "technology": 41.3,
-    "consumer_electronics": 9.8
+    "consumer_staples": 8.8,
+    "internet_platforms": 11.2,
+    "semiconductors": 9.4
   }
 }

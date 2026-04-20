@@ -5,7 +5,8 @@ Review historical actions, thesis evolution, and decision quality.
 
 ## Review flow
 1. Read active preferences
-2. Load relevant symbol thesis or portfolio snapshot
+2. Resolve the target to canonical `instrument_id`
+3. Load relevant thesis or portfolio snapshot
 3. Scan recent and historically important events
 4. Read linked decision files
 5. Summarize:
@@ -21,4 +22,5 @@ Review historical actions, thesis evolution, and decision quality.
 - Key thesis changes
 - Repeated patterns
 - Errors or drift
+- Market or currency mismatch
 - Next-step recommendation

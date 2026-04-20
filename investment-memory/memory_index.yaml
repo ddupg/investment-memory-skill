@@ -1,6 +1,6 @@
-version: 1
+version: 2
 repo_name: investment-memory
-updated_at: 2026-04-19T10:00:00+08:00
+updated_at: 2026-04-20T09:00:00+08:00
 
 entrypoints:
   active_preferences: preferences/active.yaml
@@ -14,11 +14,24 @@ directories:
   decisions: decisions/
   summaries: summaries/
 
+identity:
+  canonical_id_examples:
+    - 600519.SH
+    - 00700.HK
+    - NVDA.US
+  required_security_fields:
+    - instrument_id
+    - symbol
+    - market
+    - exchange
+    - currency
+    - security_type
+
 read_order:
   - preferences/active.yaml
   - snapshots/portfolio/latest.json
-  - theses/<SYMBOL>/thesis.md
-  - theses/<SYMBOL>/updates.jsonl
+  - theses/<INSTRUMENT_ID>/thesis.md
+  - theses/<INSTRUMENT_ID>/updates.jsonl
   - events/YYYY/YYYY-MM.jsonl
   - decisions/YYYY/*.md
 
@@ -27,3 +40,5 @@ rules:
   decisions_are_markdown: true
   thesis_updates_require_event: true
   preference_changes_require_history_archive: true
+  single_writer_repository: true
+  canonical_templates_live_in_skill: true

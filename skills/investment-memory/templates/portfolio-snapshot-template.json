@@ -1,0 +1,30 @@
+{
+  "ts": "<ISO8601 timestamp>",
+  "base_currency": "CNY",
+  "cash_pct": 0,
+  "cash_by_currency_pct": {
+    "CNY": 0,
+    "HKD": 0,
+    "USD": 0
+  },
+  "positions": [
+    {
+      "instrument_id": "<INSTRUMENT_ID>",
+      "symbol": "<SYMBOL>",
+      "market": "<CN_A|HK|US>",
+      "exchange": "<EXCHANGE>",
+      "currency": "<CURRENCY>",
+      "security_type": "equity",
+      "account_id": "<account id>",
+      "weight_pct": 0,
+      "cost_basis": 0,
+      "thesis_status": "active"
+    }
+  ],
+  "market_exposure_pct": {
+    "CN_A": 0,
+    "HK": 0,
+    "US": 0
+  },
+  "sector_exposure": {}
+}

@@ -1,0 +1,13 @@
+{
+  "ts": "<ISO8601 timestamp>",
+  "type": "<event_type>",
+  "instrument_id": "<INSTRUMENT_ID>",
+  "symbol": "<SYMBOL>",
+  "market": "<CN_A|HK|US>",
+  "exchange": "<EXCHANGE>",
+  "currency": "<CURRENCY>",
+  "security_type": "equity",
+  "source": "<manual|agent>",
+  "decision_id": "<optional decision id>",
+  "notes": "<optional short note>"
+}

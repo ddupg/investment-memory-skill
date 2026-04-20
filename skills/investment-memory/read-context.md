@@ -7,16 +7,18 @@ Retrieve only the minimum relevant historical context before answering.
 1. `memory_index.yaml`
 2. `preferences/active.yaml`
 3. latest `snapshots/portfolio/*.json`
-4. if a symbol is involved:
-   - `theses/<SYMBOL>/thesis.md`
-   - recent `theses/<SYMBOL>/updates.jsonl`
-5. recent `events/YYYY/YYYY-MM.jsonl`
-6. related `decisions/YYYY/*.md` only if deeper rationale is needed
+4. if a security is involved, first resolve it to canonical `instrument_id`
+5. then read:
+   - `theses/<INSTRUMENT_ID>/thesis.md`
+   - recent `theses/<INSTRUMENT_ID>/updates.jsonl`
+6. recent `events/YYYY/YYYY-MM.jsonl`
+7. related `decisions/YYYY/*.md` only if deeper rationale is needed
 
 ## Rules
 - Start from active preferences
 - Prefer recent context over old context
 - Distinguish facts from opinions
+- Use `market_preference_order` when the user gives only a company name or an ambiguous ticker
 - If sources conflict, prefer:
   1. active preferences
   2. latest execution events
@@ -26,7 +28,9 @@ Retrieve only the minimum relevant historical context before answering.
 
 ## Extract at least
 - active constraints
+- market preference order
 - current portfolio state
-- relevant symbol stance
+- relevant security stance
 - recent actions
+- currency exposure if relevant
 - any recent contradiction or thesis drift
