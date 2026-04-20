@@ -3,6 +3,12 @@
 ## Goal
 Write new records into the investment memory repository while preserving history and readability.
 
+## Repository root
+Default root: `~/.investment-memory`
+
+If the user does not specify another location, create and update records only under
+`~/.investment-memory`.
+
 ## Rules
 - Facts are append-only
 - Do not silently rewrite historical events
@@ -11,6 +17,7 @@ Write new records into the investment memory repository while preserving history
 - Before writing, load `templates/schema-reference.md` and the matching template
 - Reuse canonical field names exactly
 - Use `instrument_id` as the storage key for security-specific files
+- Do not write investment-memory files into the current working repository unless the user explicitly asks
 
 ## Write targets
 - New decision -> `decisions/YYYY/YYYY-MM-DD-<instrument-slug>-<action>.md`

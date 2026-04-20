@@ -1,7 +1,21 @@
+---
+name: investment-memory
+description: Use the personal investment memory repository to read historical context, check preferences, generate grounded investment suggestions, and write back thesis, decision, execution, and review records across A-share, Hong Kong, and US equities.
+metadata:
+  short-description: Manage a portable investment memory repository
+---
+
 # Skill: investment-memory
 
 Use the personal investment memory repository to retrieve history, apply user preferences,
 generate grounded investment suggestions, and write back new records.
+
+## Default repository root
+Unless the user explicitly provides another path, always use `~/.investment-memory`
+as the knowledge-base root.
+
+Do not create or write investment-memory files in the current project, temporary
+directories, or any ad hoc path unless the user explicitly asks for that.
 
 ## Use this skill when
 - answering investment questions that depend on user history
@@ -28,6 +42,7 @@ Choose the smallest relevant sub-skill set:
 ## Repository
 The repository is a lightweight file-based investment memory store.
 Prefer human-readable files and append-only factual logs.
+Treat `~/.investment-memory` as the default storage location.
 
 ## Identity rule
 Resolve every security to one canonical `instrument_id` such as `600519.SH`,

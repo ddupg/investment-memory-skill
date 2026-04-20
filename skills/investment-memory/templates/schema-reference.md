@@ -4,6 +4,12 @@ This file is the canonical write contract for the investment-memory skill.
 
 Agents must read this file before creating or substantially rewriting any record.
 
+## Default repository root
+
+Unless the user explicitly provides another path, the canonical storage root is:
+
+- `~/.investment-memory`
+
 ## Storage principles
 
 - Use `instrument_id` as the canonical identity key.
@@ -30,13 +36,13 @@ Examples:
 
 ## Path rules
 
-- Thesis summary: `investment-memory/theses/<INSTRUMENT_ID>/thesis.md`
-- Thesis updates: `investment-memory/theses/<INSTRUMENT_ID>/updates.jsonl`
-- Decisions: `investment-memory/decisions/YYYY/YYYY-MM-DD-<instrument-slug>-<action>.md`
-- Events: `investment-memory/events/YYYY/YYYY-MM.jsonl`
-- Active preferences: `investment-memory/preferences/active.yaml`
-- Archived preferences: `investment-memory/preferences/history/YYYY-MM-DD.yaml`
-- Latest snapshot: `investment-memory/snapshots/portfolio/latest.json`
+- Thesis summary: `~/.investment-memory/theses/<INSTRUMENT_ID>/thesis.md`
+- Thesis updates: `~/.investment-memory/theses/<INSTRUMENT_ID>/updates.jsonl`
+- Decisions: `~/.investment-memory/decisions/YYYY/YYYY-MM-DD-<instrument-slug>-<action>.md`
+- Events: `~/.investment-memory/events/YYYY/YYYY-MM.jsonl`
+- Active preferences: `~/.investment-memory/preferences/active.yaml`
+- Archived preferences: `~/.investment-memory/preferences/history/YYYY-MM-DD.yaml`
+- Latest snapshot: `~/.investment-memory/snapshots/portfolio/latest.json`
 
 `<instrument-slug>` should be lowercase and replace separators with hyphens.
 
@@ -61,6 +67,7 @@ Do not:
 - store a bare `symbol` without market metadata
 - overwrite historical events to "clean up" the past
 - create a new thesis directory using only `symbol`
+- store the repository under an ad hoc path when `~/.investment-memory` should be used
 
 ## Minimum required fields by record type
 

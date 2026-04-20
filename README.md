@@ -3,6 +3,10 @@
 This repository contains a portable investment-memory skill and a sample file-based
 knowledge base for personal investing.
 
+Default runtime storage location for actual user data:
+
+- `~/.investment-memory`
+
 It is designed for a single-writer repository that mainly covers:
 
 - A-share (`CN_A`)
@@ -15,6 +19,7 @@ It is designed for a single-writer repository that mainly covers:
   Agent instructions, sub-skills, schema reference, and canonical write templates.
 - `investment-memory/`
   Example knowledge-base data managed by the skill.
+  This is sample data for the skill repository itself, not the default live storage path.
 
 ## Design goals
 
@@ -56,6 +61,10 @@ is defined by:
 - [skills/investment-memory/templates/schema-reference.md](/Users/bytedance/opensource/investment-memory-skill/skills/investment-memory/templates/schema-reference.md)
 - the matching template files in `skills/investment-memory/templates/`
 
+By default, live investment-memory data should be stored under `~/.investment-memory`.
+Do not treat this repository's `investment-memory/` example directory as the default
+write target for day-to-day use.
+
 ## Agent compatibility
 
 This package is intentionally plain:
@@ -80,15 +89,14 @@ Two reasonable installation modes:
 
 2. User-level skill install
    Copy `skills/investment-memory/` to `$CODEX_HOME/skills/investment-memory/`, then
-   point the working repository at a target knowledge-base root such as
-   `investment-memory/`.
+   point the skill at `~/.investment-memory` unless the user explicitly selects another root.
 
 Recommended Codex routing rule:
 
 ```md
 When the task involves investment memory lookup, recommendation, thesis updates,
 decision logging, or portfolio review, read `skills/investment-memory/SKILL.md`
-first and manage the repository rooted at `investment-memory/`.
+first and manage the repository rooted at `~/.investment-memory` unless the user explicitly overrides it.
 ```
 
 ### OpenClaw and similar agents
@@ -98,6 +106,7 @@ Treat `skills/investment-memory/` as a reusable prompt pack:
 1. Load `SKILL.md` as the entry instruction.
 2. Route to the referenced sub-files such as `read-context.md` and `write-memory.md`.
 3. Grant file access to the knowledge-base root.
+   Default root: `~/.investment-memory`
 4. Require the agent to load `templates/schema-reference.md` plus the matching template
    before creating or rewriting records.
 

@@ -3,6 +3,12 @@
 ## Goal
 Retrieve only the minimum relevant historical context before answering.
 
+## Repository root
+Default root: `~/.investment-memory`
+
+If the user does not specify another location, resolve every path in this file relative
+to `~/.investment-memory`.
+
 ## Read order
 1. `memory_index.yaml`
 2. `preferences/active.yaml`

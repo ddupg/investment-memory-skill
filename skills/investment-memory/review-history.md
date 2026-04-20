@@ -3,6 +3,9 @@
 ## Goal
 Review historical actions, thesis evolution, and decision quality.
 
+## Repository root
+Default root: `~/.investment-memory`
+
 ## Review flow
 1. Read active preferences
 2. Resolve the target to canonical `instrument_id`
