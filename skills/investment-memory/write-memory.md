@@ -24,6 +24,9 @@ If the user does not specify another location, create and update records only un
 - New factual event -> append to `events/YYYY/YYYY-MM.jsonl`
 - Thesis update -> update `theses/<INSTRUMENT_ID>/thesis.md` and append to `updates.jsonl`
 - Preference update -> archive old `preferences/active.yaml`, then write new one
+- Strategy update -> archive old `strategy/active.yaml`, then write new one
+- Allocation update -> update `allocation/target.yaml`
+- Trade execution -> update `market-accounts/snapshots/latest.json` and `snapshots/portfolio/latest.json`
 
 ## Metadata
 Include as relevant:
@@ -41,3 +44,13 @@ Include as relevant:
 - linked_theses
 - linked_events
 - tags
+
+## Market-account rule
+Assume one account per market unless the user explicitly says otherwise.
+
+Default market account mapping:
+- `CN_A` -> one A-share account
+- `HK` -> one Hong Kong account
+- `US` -> one US account
+
+When a trade is recorded, update the matching market account's cash and invested amounts.

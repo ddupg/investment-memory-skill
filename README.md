@@ -27,6 +27,7 @@ It is designed for a single-writer repository that mainly covers:
 - Facts stay append-only where possible
 - Long reasoning lives in Markdown
 - Every security has a canonical identity, not just a bare ticker
+- Market-level strategy and funding must inform buy decisions
 - The same skill can be reused by Codex, OpenClaw, or another file-writing agent
 
 ## Canonical identity model
@@ -42,6 +43,26 @@ Every tracked security should have these fields:
 
 `instrument_id` is the storage key. File paths, links, and thesis directories should
 use it instead of a bare symbol.
+
+## Market-level operating model
+
+This skill assumes one account per market unless the user explicitly says otherwise.
+
+- `CN_A`: one A-share account
+- `HK`: one Hong Kong account
+- `US`: one US account
+
+That means funding and strategy checks are performed at the market level, not at a
+broker-subaccount level.
+
+Recommended live files under `~/.investment-memory`:
+
+- `preferences/active.yaml`: global investing preferences
+- `strategy/active.yaml`: per-market investing style and rules
+- `allocation/target.yaml`: target capital allocation by market
+- `market-accounts/snapshots/latest.json`: current cash and equity by market account
+- `snapshots/portfolio/latest.json`: current holdings snapshot
+- `theses/<INSTRUMENT_ID>/`: security-level thesis files
 
 ## Why templates live inside the skill
 
@@ -119,9 +140,14 @@ For each task, the agent should:
 
 1. Read `skills/investment-memory/SKILL.md`.
 2. Resolve the security to a canonical `instrument_id`.
-3. Read active preferences and relevant history.
+3. Read active preferences, market strategy, allocation targets, and current market funds.
 4. Before any write, load the schema reference and the matching template.
 5. Write only the minimum required files.
+
+When answering "should I buy this name now?", the agent should judge both:
+
+- strategy fit: does the name match how this market is meant to be invested?
+- funding fit: does the relevant market account have enough room and cash right now?
 
 ## Current sample scope
 

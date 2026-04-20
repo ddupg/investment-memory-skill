@@ -41,6 +41,9 @@ Examples:
 - Decisions: `~/.investment-memory/decisions/YYYY/YYYY-MM-DD-<instrument-slug>-<action>.md`
 - Events: `~/.investment-memory/events/YYYY/YYYY-MM.jsonl`
 - Active preferences: `~/.investment-memory/preferences/active.yaml`
+- Active strategy: `~/.investment-memory/strategy/active.yaml`
+- Target allocation: `~/.investment-memory/allocation/target.yaml`
+- Latest market-account snapshot: `~/.investment-memory/market-accounts/snapshots/latest.json`
 - Archived preferences: `~/.investment-memory/preferences/history/YYYY-MM-DD.yaml`
 - Latest snapshot: `~/.investment-memory/snapshots/portfolio/latest.json`
 
@@ -106,6 +109,17 @@ Do not:
 - `positions`
 - `market_exposure_pct`
 
+### Market-account snapshots
+
+- `ts`
+- `base_currency`
+- one account object per market in scope
+- `available_cash`
+- `invested_amount`
+- `total_equity`
+- `strategy_tag`
+- `status`
+
 ## Market conventions
 
 - `CN_A`: mainland A-shares traded in CNY on `SH` or `SZ`
@@ -119,3 +133,6 @@ Do not:
 - `event-template.json`
 - `preference-template.yaml`
 - `portfolio-snapshot-template.json`
+- `strategy-template.yaml`
+- `allocation-template.yaml`
+- `market-accounts-template.json`

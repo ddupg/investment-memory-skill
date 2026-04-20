@@ -1,0 +1,19 @@
+version: 1
+updated_at: <ISO8601 timestamp>
+source: <manual|agent>
+
+base_currency: CNY
+
+market_targets:
+  CN_A:
+    target_pct: 50
+    max_pct: 55
+  HK:
+    target_pct: 30
+    max_pct: 35
+  US:
+    target_pct: 20
+    max_pct: 25
+
+notes:
+  - <plain-language allocation rule>

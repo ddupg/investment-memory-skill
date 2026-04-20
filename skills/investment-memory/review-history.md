@@ -8,16 +8,19 @@ Default root: `~/.investment-memory`
 
 ## Review flow
 1. Read active preferences
-2. Resolve the target to canonical `instrument_id`
-3. Load relevant thesis or portfolio snapshot
-3. Scan recent and historically important events
-4. Read linked decision files
-5. Summarize:
+2. Read active strategy and target allocation
+3. Read the latest market-account snapshot
+4. Resolve the target to canonical `instrument_id`
+5. Load relevant thesis or portfolio snapshot
+6. Scan recent and historically important events
+7. Read linked decision files
+8. Summarize:
    - what happened
    - how the thesis changed
    - what worked
    - what failed
    - whether current positioning still fits preferences
+   - whether the position still fits the market strategy and available funds
    - what to do next
 
 ## Output

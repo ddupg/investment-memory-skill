@@ -1,0 +1,33 @@
+{
+  "ts": "<ISO8601 timestamp>",
+  "base_currency": "CNY",
+  "markets": {
+    "CN_A": {
+      "account_id": "cn-a-main",
+      "currency": "CNY",
+      "available_cash": 0,
+      "invested_amount": 0,
+      "total_equity": 0,
+      "strategy_tag": "<strategy tag>",
+      "status": "active"
+    },
+    "HK": {
+      "account_id": "hk-main",
+      "currency": "HKD",
+      "available_cash": 0,
+      "invested_amount": 0,
+      "total_equity": 0,
+      "strategy_tag": "<strategy tag>",
+      "status": "active"
+    },
+    "US": {
+      "account_id": "us-main",
+      "currency": "USD",
+      "available_cash": 0,
+      "invested_amount": 0,
+      "total_equity": 0,
+      "strategy_tag": "<strategy tag>",
+      "status": "active"
+    }
+  }
+}

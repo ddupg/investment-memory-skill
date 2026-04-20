@@ -1,0 +1,29 @@
+version: 1
+updated_at: <ISO8601 timestamp>
+source: <manual|agent>
+
+markets:
+  CN_A:
+    strategy_tag: <core_value|quality_growth|event_driven>
+    description: <plain language summary>
+    buy_conditions:
+      - <condition>
+    sell_conditions:
+      - <condition>
+    holding_period: <swing|medium_term|long_term>
+  HK:
+    strategy_tag: <platform_core|valuation_recovery|dividend_compounder>
+    description: <plain language summary>
+    buy_conditions:
+      - <condition>
+    sell_conditions:
+      - <condition>
+    holding_period: <swing|medium_term|long_term>
+  US:
+    strategy_tag: <global_leader|ai_infra|satellite_growth>
+    description: <plain language summary>
+    buy_conditions:
+      - <condition>
+    sell_conditions:
+      - <condition>
+    holding_period: <swing|medium_term|long_term>
